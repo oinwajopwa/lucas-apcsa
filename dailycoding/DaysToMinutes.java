@@ -5,7 +5,6 @@ public class DaysToMinutes {
     public static void main(String[] args){
         System.out.println("Input the amount of days to convert to minutes.");
         int days = scan.nextInt();
-        int minutes = days * 1440;
-        System.out.println("There are " + minutes + " in " + days + " days.");
+        System.out.println("There are " + (days * 24 * 60) + " in " + days + " days.");
     }
 }
