@@ -3,7 +3,7 @@ public class PrintMessage {
         // Create a new thread to print the message
         Thread thread = new Thread(() -> {
             while (true) {
-                System.out.println("Aaron Amaya is gay");
+                System.out.println("Aaron Amaya is dumb");
                 try {
                     // Sleep for 1 second (1000 milliseconds)
                     Thread.sleep(1000);

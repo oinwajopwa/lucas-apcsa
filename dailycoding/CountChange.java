@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class kaisov
+class CountChange
 {
   public static void main(String[] args) 
   {

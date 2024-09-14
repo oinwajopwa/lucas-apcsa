@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class Trapezoid{
+class Triangle{
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-      System.out.println("Welcome to the Trapezoid Area Finder, please input the large base.");
+      System.out.println("Welcome to the Triangle Area Finder, please input the large base.");
       int LB = scan.nextInt();
       System.out.println("Now, input the small base.");
       int SB = scan.nextInt();

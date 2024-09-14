@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class multiples {
+class Multiples {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args){
         System.out.println("Please pick 5 values you want to multiply.");
@@ -19,3 +19,4 @@ class multiples {
         System.out.println(value11 + " " + value22 + " " + value33 + " " + value44 + " " + value55);
     }
 }
+//SUPER INEFFICIENT!!!!!!!!!!!!!!!!!! I'll find a more efficient solution later.

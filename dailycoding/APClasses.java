@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class aaronamaya
+class APClasses
 {
   
   public static void main(String[] args) 
