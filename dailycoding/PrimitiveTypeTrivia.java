@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class PrimitiveTypeTrivia {
     static Scanner scan = new Scanner(System.in);
-    private static String next;
     public static void main(String[] args) {
         System.out.println("What's your favorite number between 1-127?");
         byte q1 = scan.nextByte();
