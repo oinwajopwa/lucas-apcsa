@@ -1,4 +1,4 @@
-class friendpoem
+class FriendPoem
 {
   
   public static void main(String[] args) 
