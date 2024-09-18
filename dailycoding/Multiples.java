@@ -13,5 +13,6 @@ public class Multiples {
         System.out.println(number * 3);
         System.out.println(number * 4);
         System.out.println(number * 5);
+        scan.close();
     }
 }

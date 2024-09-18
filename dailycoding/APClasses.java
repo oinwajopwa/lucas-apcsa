@@ -5,7 +5,6 @@ class APClasses
   
   public static void main(String[] args) 
   {
-    
     Scanner scan = new Scanner(System.in);
     
     String classes;
@@ -17,5 +16,6 @@ class APClasses
     System.out.println("Can you name the AP classes you're taking?");
     classes = scan.nextLine();
     System.out.println("You are taking the following " + numClasses + " AP classes and they are " + classes + ".");
+    scan.close();
   } 
 }
