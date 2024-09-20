@@ -7,7 +7,7 @@ public class NameInASCIIvtwo {
         int a = (int) name.charAt(3);
         int s = (int) name.charAt(4);
 
-        char L = (char) (name.charAt(0) - 32);
+        char L = (char)  (name.charAt(0) - 32);
         char U = (char) (name.charAt(1) - 32);
         char C = (char) (name.charAt(2) - 32);
         char A = (char) (name.charAt(3) - 32);
@@ -16,4 +16,4 @@ public class NameInASCIIvtwo {
         System.out.println("lucas is " + l + " " + u + " " + c + " " + a + " " + s);
         System.out.println("lucas uppercased is " + L + " " + U + " " + C + " " + A + " " + S);
     }
-}       
+}
