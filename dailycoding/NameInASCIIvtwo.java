@@ -16,4 +16,4 @@ public class NameInASCIIvtwo {
         System.out.println("lucas is " + l + " " + u + " " + c + " " + a + " " + s);
         System.out.println("lucas uppercased is " + L + " " + U + " " + C + " " + A + " " + S);
     }
-}
+}       
