@@ -7,9 +7,6 @@ public class WordLength {
         String one = scan.next();
         String two = scan.next();
         String three = scan.next();
-        int length1 = one.length();
-        int length2 = two.length();
-        int length3 = three.length();
-        System.out.println(one + " has " + length1 + " letters, " + two + " has " + length2 + " letters, " + three + " has " + length3 + " letters.");
+        System.out.println(one + " has " + (one.length()) + " letters, " + two + " has " + (two.length()) + " letters, " + three + " has " + three.length() + " letters.");
     }
 }
