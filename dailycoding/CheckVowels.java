@@ -6,9 +6,9 @@ public class CheckVowels {
         System.out.println("Please input a word.");
         String word = scan.nextLine();
         System.out.println("a: " + word.indexOf("a"));
-        System.out.println("e: " +word.indexOf("e"));
-        System.out.println("i: " +word.indexOf("i"));
-        System.out.println("o: " +word.indexOf("o"));
-        System.out.println("u: " +word.indexOf("u"));
+        System.out.println("e: " + word.indexOf("e"));
+        System.out.println("i: " + word.indexOf("i"));
+        System.out.println("o: " + word.indexOf("o"));
+        System.out.println("u: " + word.indexOf("u"));
     }
 }
