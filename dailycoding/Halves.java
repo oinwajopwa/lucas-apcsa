@@ -7,8 +7,10 @@ public class Halves {
         String sentence = scan.nextLine();
         System.out.println("Now, grab a word from that sentence.");
         String word = scan.nextLine();
-        //System.out.println(sentence.indexOf(word));
         System.out.println("First Half: " + sentence.substring(0, sentence.indexOf(word)));
         System.out.println("Second Half: " + sentence.substring(sentence.indexOf(word)));
+        scan.close();
     }
 }
+
+//System.out.println(sentence.indexOf(word));
