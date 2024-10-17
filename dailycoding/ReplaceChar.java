@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.*;
 
 public class ReplaceChar {
     public static void main(String[] args) {

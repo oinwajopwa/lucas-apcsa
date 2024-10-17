@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BeforeAndAfterv2 {
+public class BeforeAndAfter {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Please select a number.");
