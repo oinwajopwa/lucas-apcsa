@@ -1,0 +1,175 @@
+import java.util.Scanner;
+
+public class HangPerson {
+
+    String word;
+    String wordStatus = "";
+
+    String guessedLetters = "";
+
+    int incorrect = 0;
+    int correct = 0;
+
+    Scanner user_input = new Scanner(System.in);
+
+    public void start() {
+        run();
+    }
+
+    public void run() {
+        System.out.println("working!");
+        displayDirections();
+        setupVariables();
+        setupWordStatus();
+
+        while (incorrect < 5 && !wordStatus.equals(word)) {
+            showStatus();
+            String let = getLetter();
+            if (!checkGuessedLetter(let.charAt(0))) {
+                guessedLetters += let + " ";
+                if (word.indexOf(let.charAt(0)) != -1) {
+                    wordStatus = displayWordStatus(let.charAt(0));
+                    correct++;
+                } else {
+                    incorrect++;
+                    showHangPerson(incorrect);
+                }
+            } else {
+                System.out.println("You already guessed that letter!");
+            }
+        }
+
+        if (wordStatus.equals(word)) {
+            System.out.println("Congratulations, you guessed the word: " + word);
+        } else {
+            System.out.println("You lost! The word was: " + word);
+        }
+    }
+
+    public void setupVariables() {
+        word = getRandomWord();
+    }
+
+    private void setupWordStatus() {
+        for (int i = 0; i < word.length(); i++) {
+            wordStatus += "_";
+        }
+    }
+
+    public void displayDirections() {
+        System.out.println("Welcome to HangPerson!\nYou will be given a random word which you will attempt to guess by inputting a letter at a time, until you correctly guess the entirety of the word.\nGOOD LUCK!");
+    }
+
+    public void showStatus() {
+        System.out.println("There are " + word.length() + " letters in the word.");
+        System.out.println("You have guessed these letters: " + guessedLetters);
+        System.out.println("Current status: " + wordStatus);
+    }
+
+    private String displayWordStatus(char guessedLetter) {
+        String updatedStatus = wordStatus;
+        
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == guessedLetter) {
+                updatedStatus = updatedStatus.substring(0, i) + guessedLetter + updatedStatus.substring(i + 1);
+            }
+        }
+        return updatedStatus;
+    }
+
+    private int countCorrect(char c) {
+        int count = 0;
+        for(int i = 0; i < word.length(); i++){
+            if(word.charAt(i) == c){
+                count++;
+            } 
+        }
+        return count;
+    }
+
+    private boolean checkGuessedLetter(char c) {
+        return guessedLetters.indexOf(c) != -1;
+    }
+
+    public String getRandomWord() {
+        String[] words = {"shark", "phone", "stressball", "skrammy"};
+        int num = (int) (Math.random() * words.length); 
+        return words[num];
+    }
+
+    public String replaceCharInWord(String word, char c, int index) { 
+        return word.substring(0, index) + c + word.substring(index + 1);
+    }
+
+    public String getLetter() {
+        System.out.println("Guess a letter: ");
+        return user_input.nextLine().toLowerCase();
+    }
+
+    public boolean guessWord(String w) {
+        return w.equals(word);
+    }
+
+    private void showHangPerson(int inc) {
+        switch (inc) {
+            case 0: 
+                break;
+
+            case 1:
+                System.out.println("We've got the scaffold ready...");
+                System.out.println("   _______");
+                System.out.println("    |/      |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("   _|___");
+                break;
+            case 2:
+                System.out.println("Second wrong.. he's hanging...");
+                System.out.println("   _______");
+                System.out.println("    |/      |");
+                System.out.println("    |      (_)");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("   _|___");
+                break;
+            case 3:
+                System.out.println("He's raising his hands for help.. Help him!...");
+                System.out.println("   _______");
+                System.out.println("    |/      |");
+                System.out.println("    |      (_)");
+                System.out.println("    |      \\|/");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("   _|___");
+                break;
+            case 4:
+                System.out.println("No time left.. one false step...");
+                System.out.println("   _______");
+                System.out.println("    |/      |");
+                System.out.println("    |      (_)");
+                System.out.println("    |      \\|/");
+                System.out.println("    |       |");
+                System.out.println("    |");
+                System.out.println("    |");
+                System.out.println("   _|___");
+                break;
+            case 5:
+                System.out.println("Times up!");
+                System.out.println("   _______");
+                System.out.println("    |/      |");
+                System.out.println("    |      (_)");
+                System.out.println("    |      \\|/");
+                System.out.println("    |       |");
+                System.out.println("    |      / \\");
+                System.out.println("    |");
+                System.out.println("   _|___");
+                break;
+        }
+    }
+}
